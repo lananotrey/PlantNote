@@ -12,12 +12,12 @@ struct OnboardingView: View {
         ),
         OnboardingPage(
             title: "Track Watering Schedule",
-            description: "Never forget to water your plants with personalized watering schedules and reminders",
+            description: "Never forget to water your plants",
             imageName: "drop.fill"
         ),
         OnboardingPage(
             title: "Detailed Plant Care",
-            description: "Keep track of fertilizing, repotting, and important notes for each of your plants",
+            description: "Keep track of important notes for each of your plants",
             imageName: "square.and.pencil"
         )
     ]
