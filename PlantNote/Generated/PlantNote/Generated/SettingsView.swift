@@ -2,10 +2,15 @@ import SwiftUI
 
 struct SettingsView: View {
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = true
+    @AppStorage("isDarkMode") private var isDarkMode = false
     
     var body: some View {
         NavigationView {
             List {
+                Section("Appearance") {
+                    Toggle("Dark Mode", isOn: $isDarkMode)
+                }
+                
                 Section("About") {
                     Button("Reset Onboarding") {
                         hasCompletedOnboarding = false
