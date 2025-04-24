@@ -6,19 +6,19 @@ struct OnboardingView: View {
     
     let pages = [
         OnboardingPage(
-            title: "Welcome to Plant Note",
-            description: "Your personal assistant for taking care of your plants",
+            title: "Welcome to PlantNote",
+            description: "Your personal assistant for keeping track of all your plants in one place",
             imageName: "leaf.fill"
         ),
         OnboardingPage(
-            title: "Track Your Plants",
-            description: "Keep detailed records of watering, fertilizing, and repotting schedules",
-            imageName: "calendar"
+            title: "Track Watering Schedule",
+            description: "Never forget to water your plants with personalized watering schedules and reminders",
+            imageName: "drop.fill"
         ),
         OnboardingPage(
-            title: "Care For Your Plants",
-            description: "Keep track of all your plants' needs in one place",
-            imageName: "heart.fill"
+            title: "Detailed Plant Care",
+            description: "Keep track of fertilizing, repotting, and important notes for each of your plants",
+            imageName: "square.and.pencil"
         )
     ]
     
@@ -27,7 +27,7 @@ struct OnboardingView: View {
             Color("BackgroundColor")
                 .ignoresSafeArea()
             
-            VStack {
+            VStack(spacing: 0) {
                 TabView(selection: $currentPage) {
                     ForEach(0..<pages.count, id: \.self) { index in
                         OnboardingPageView(page: pages[index])
@@ -35,13 +35,20 @@ struct OnboardingView: View {
                     }
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+                .animation(.easeInOut, value: currentPage)
                 
                 Button {
-                    withAnimation {
-                        hasCompletedOnboarding = true
+                    if currentPage < pages.count - 1 {
+                        withAnimation {
+                            currentPage += 1
+                        }
+                    } else {
+                        withAnimation {
+                            hasCompletedOnboarding = true
+                        }
                     }
                 } label: {
-                    Text(currentPage == pages.count - 1 ? "Get Started" : "Skip")
+                    Text(currentPage == pages.count - 1 ? "Get Started" : "Next")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -66,20 +73,28 @@ struct OnboardingPageView: View {
     let page: OnboardingPage
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 30) {
+            Spacer()
+            
             Image(systemName: page.imageName)
-                .font(.system(size: 80))
+                .font(.system(size: 100))
                 .foregroundColor(.green)
+                .transition(.scale.combined(with: .opacity))
             
             Text(page.title)
                 .font(.title)
                 .bold()
+                .transition(.slide)
             
             Text(page.description)
                 .font(.body)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
-                .padding(.horizontal)
+                .padding(.horizontal, 32)
+                .transition(.slide)
+            
+            Spacer()
+            Spacer()
         }
         .padding()
     }
