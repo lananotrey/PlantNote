@@ -4,7 +4,7 @@ struct PlantsListView: View {
     @EnvironmentObject var plantManager: PlantManager
     @Binding var showingAddPlant: Bool
     @State private var searchText = ""
-    @State private var selectedTab = 0
+    @Binding var selectedTab: Int
     
     var filteredPlants: [Plant] {
         if searchText.isEmpty {
@@ -25,11 +25,7 @@ struct PlantsListView: View {
                     ScrollView {
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                             ForEach(filteredPlants) { plant in
-                                NavigationLink {
-                                    PlantDetailView(selectedTab: $selectedTab, plant: plant)
-                                } label: {
-                                    PlantCardView(plant: plant)
-                                }
+                                PlantCardView(plant: plant, selectedTab: $selectedTab)
                             }
                         }
                         .padding()

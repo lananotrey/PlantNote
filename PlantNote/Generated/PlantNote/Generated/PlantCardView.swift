@@ -3,6 +3,7 @@ import SwiftUI
 struct PlantCardView: View {
     let plant: Plant
     @State private var showingDetail = false
+    @Binding var selectedTab: Int
     
     var body: some View {
         Button {
@@ -27,7 +28,7 @@ struct PlantCardView: View {
             .shadow(radius: 2)
         }
         .sheet(isPresented: $showingDetail) {
-            PlantDetailView(plant: plant)
+            PlantDetailView(selectedTab: $selectedTab, plant: plant)
         }
     }
     

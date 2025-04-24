@@ -7,7 +7,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            PlantsListView(showingAddPlant: $showingAddPlant)
+            PlantsListView(showingAddPlant: $showingAddPlant, selectedTab: $selectedTab)
                 .tabItem {
                     Label("My Plants", systemImage: "leaf.fill")
                 }
