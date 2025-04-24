@@ -28,7 +28,7 @@ class PlantManager: ObservableObject {
     private func savePlants() {
         do {
             let data = try JSONEncoder().encode(plants)
-            try data.write(to: savePath, options: [.atomic, .completeFileProtection])
+            try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
         } catch {
             print("Unable to save plants: \(error.localizedDescription)")
         }
