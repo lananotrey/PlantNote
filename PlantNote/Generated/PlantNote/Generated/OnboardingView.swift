@@ -16,9 +16,9 @@ struct OnboardingView: View {
             imageName: "calendar"
         ),
         OnboardingPage(
-            title: "Never Forget",
-            description: "Get reminders when it's time to water or care for your plants",
-            imageName: "bell.fill"
+            title: "Care For Your Plants",
+            description: "Keep track of all your plants' needs in one place",
+            imageName: "heart.fill"
         )
     ]
     

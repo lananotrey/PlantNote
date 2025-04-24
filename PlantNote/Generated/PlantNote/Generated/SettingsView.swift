@@ -1,37 +1,21 @@
-import SwiftUI
+import Foundation
 
-struct SettingsView: View {
-    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = true
-    @AppStorage("notificationsEnabled") private var notificationsEnabled = true
+struct Plant: Identifiable, Codable {
+    let id: UUID
+    var name: String
+    var notes: String
+    var lastWatered: Date
+    var lastFertilized: Date?
+    var lastRepotted: Date?
+    var wateringInterval: Int // in days
     
-    var body: some View {
-        NavigationView {
-            List {
-                Section("Notifications") {
-                    Toggle("Enable Notifications", isOn: $notificationsEnabled)
-                }
-                
-                Section("About") {
-                    Button("Reset Onboarding") {
-                        hasCompletedOnboarding = false
-                    }
-                    
-                    Link(destination: URL(string: "https://example.com/privacy")!) {
-                        Text("Privacy Policy")
-                    }
-                    
-                    Link(destination: URL(string: "https://example.com/terms")!) {
-                        Text("Terms of Service")
-                    }
-                }
-                
-                Section("App Info") {
-                    if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-                        Text("Version \(version)")
-                    }
-                }
-            }
-            .navigationTitle("Settings")
-        }
+    init(id: UUID = UUID(), name: String, notes: String, lastWatered: Date = Date(), lastFertilized: Date? = nil, lastRepotted: Date? = nil, wateringInterval: Int) {
+        self.id = id
+        self.name = name
+        self.notes = notes
+        self.lastWatered = lastWatered
+        self.lastFertilized = lastFertilized
+        self.lastRepotted = lastRepotted
+        self.wateringInterval = wateringInterval
     }
 }
