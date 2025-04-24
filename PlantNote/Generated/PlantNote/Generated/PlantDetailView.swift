@@ -3,11 +3,14 @@ import SwiftUI
 struct PlantDetailView: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var plantManager: PlantManager
+    @Binding var selectedTab: Int
     let plant: Plant
     
     @State private var isEditing = false
     @State private var showingDeleteAlert = false
     @State private var showingShareSheet = false
+    @State private var showingSuccessAlert = false
+    @State private var successMessage = ""
     
     var body: some View {
         ScrollView {
@@ -82,15 +85,29 @@ struct PlantDetailView: View {
             NavigationView {
                 PlantEditView(plant: plant) { updatedPlant in
                     plantManager.updatePlant(updatedPlant)
-                    dismiss()
+                    successMessage = "\(updatedPlant.name) has been updated"
+                    showingSuccessAlert = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        dismiss()
+                        selectedTab = 0
+                    }
                 }
             }
+        }
+        .alert("Success", isPresented: $showingSuccessAlert) {
+        } message: {
+            Text(successMessage)
         }
         .alert("Delete Plant", isPresented: $showingDeleteAlert) {
             Button("Cancel", role: .cancel) { }
             Button("Delete", role: .destructive) {
                 plantManager.deletePlant(plant)
-                dismiss()
+                successMessage = "\(plant.name) has been deleted"
+                showingSuccessAlert = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    dismiss()
+                    selectedTab = 0
+                }
             }
         } message: {
             Text("Are you sure you want to delete \(plant.name)? This action cannot be undone.")
