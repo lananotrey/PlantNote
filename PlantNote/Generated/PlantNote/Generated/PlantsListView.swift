@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PlantsListView: View {
     @EnvironmentObject var plantManager: PlantManager
-    @State private var showingAddPlant = false
+    @Binding var showingAddPlant: Bool
     @State private var searchText = ""
     
     var filteredPlants: [Plant] {
@@ -25,13 +25,6 @@ struct PlantsListView: View {
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                             ForEach(filteredPlants) { plant in
                                 PlantCardView(plant: plant)
-                                    .contextMenu {
-                                        Button(role: .destructive) {
-                                            plantManager.deletePlant(plant)
-                                        } label: {
-                                            Label("Delete", systemImage: "trash")
-                                        }
-                                    }
                             }
                         }
                         .padding()
@@ -50,9 +43,6 @@ struct PlantsListView: View {
                             .foregroundColor(.green)
                     }
                 }
-            }
-            .sheet(isPresented: $showingAddPlant) {
-                AddPlantView(plantManager: plantManager)
             }
         }
     }
