@@ -1,15 +1,113 @@
 {
   "bundleId" : "com.PlantNote.plnt6291",
-  "lastModified" : 767159251.070186,
   "teamId" : "com.PlantNote.plnt6291",
+  "lastModified" : 767159251.070186,
   "id" : "33600181-5C41-4099-B4D3-EB8C3CAF7F11",
-  "location" : "\/Users\/workcar\/Documents\/gen project\/PlantNote",
   "name" : "PlantNote",
-  "chatHistory" : [
-
-  ],
+  "location" : "\/Users\/workcar\/Documents\/gen project\/PlantNote",
   "files" : [
-
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/ContentView.swift",
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/Colors.xcassets\/Contents.json",
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/PlantNote\/Generated\/PlantDetailView.swift",
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/PlantNote\/Generated\/PlantManager.swift",
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/PlantNote\/Generated\/PlantCardView.swift",
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/PlantNote\/Generated\/EmptyStateView.swift",
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/PlantNote\/Generated\/FileManager+Extension.swift",
+    "\/Users\/workcar\/Documents\/gen project\/PlantNote\/PlantNote\/Generated\/PlantNote\/Generated\/AddPlantView.swift"
   ],
-  "template" : "AppProject"
+  "template" : "AppProject",
+  "chatHistory" : [
+    {
+      "role" : "user",
+      "timestamp" : 767159482.46087,
+      "id" : "2F6B6BF1-A9F7-42D7-81A2-D6BA09248020",
+      "content" : "You are an advanced AI SwiftUI assistant designed to generates source based on user instructions. \nYour primary objective is to generate the content of the files to be created as code blocks. Each code block should specify whether it's a file.\n\nWhen given a user request, perform the following steps:\n1. Understand the User Request: Carefully interpret what the user wants to create.\n2. Please generate all necessary files for this request.\n3. You create full functioning, complete code files, not just snippets. No approximations or placeholders. FULL WORKING CODE.\n4. YOU MUST ALWAYS RETURN THE COMPLETE FILE CONTENT. NEVER USE PLACEHOLDERS OR SKIP SECTIONS.Don't generate main app scene code with WindowGroup.\nIMPORTANT: Your response must ONLY contain the code blocks with no additional text before or after. Do not use markdown formatting outside of the code blocks. Use the following format for the special comment line. Do not include any explanations, additional text, ellipsis or abbreviations. Don't change any files in Extensions folder.\n\nFormat your response to clearly separate different COMPLETE files, using markers like: \nFILE: file\n<code content>\nEND_FILE\n\nUser request:\n{{userPrompt}}"
+    },
+    {
+      "role" : "user",
+      "timestamp" : 767159482.461473,
+      "id" : "81F367FC-587C-4305-A3DC-8CEA432A35AB",
+      "content" : "Напиши приложение на SwiftUI, дизайн должен быть красивым и ярким, которое соответсвует этому описанию: Plant Note - это минималистичное приложение, предназначенное для любителей растений, чтобы следить за их уходом за комнатными растениями. Пользователи могут добавлять записи о растениях с названиями, примечаниями по уходу и датами полива, пересадки или внесения удобрений. Вы можете обновлять или удалять записи в любое время, чтобы отразить изменения или зарегистрировать новые действия."
+    },
+    {
+      "role" : "assistant",
+      "timestamp" : 767159525.075709,
+      "fileChanges" : [
+        {
+          "path" : "PlantCardView.swift",
+          "changes" : {
+            "removedLines" : 0,
+            "addedLines" : 40
+          },
+          "type" : "added",
+          "id" : "87F7CC54-2070-400C-BB42-79FC216E999D"
+        },
+        {
+          "type" : "added",
+          "changes" : {
+            "removedLines" : 0,
+            "addedLines" : 9
+          },
+          "id" : "46DF0686-B5D9-4878-8456-8C4722C7B3E1",
+          "path" : "FileManager+Extension.swift"
+        },
+        {
+          "type" : "added",
+          "changes" : {
+            "removedLines" : 0,
+            "addedLines" : 69
+          },
+          "id" : "8753E20A-7DB7-4B37-8EC6-E502AC9BD5FA",
+          "path" : "AddPlantView.swift"
+        },
+        {
+          "type" : "modified",
+          "changes" : {
+            "removedLines" : 0,
+            "addedLines" : 32
+          },
+          "id" : "8DF7F990-4795-48C3-BA53-03F4D03891A8",
+          "path" : "Contents.json"
+        },
+        {
+          "type" : "modified",
+          "changes" : {
+            "removedLines" : 0,
+            "addedLines" : 9
+          },
+          "id" : "382ED204-1490-4B70-A343-4CCDF78B0E18",
+          "path" : "ContentView.swift"
+        },
+        {
+          "type" : "added",
+          "changes" : {
+            "addedLines" : 46,
+            "removedLines" : 0
+          },
+          "id" : "FA53FE97-E94D-4440-91DF-C19AD9A7B460",
+          "path" : "PlantManager.swift"
+        },
+        {
+          "type" : "added",
+          "changes" : {
+            "removedLines" : 0,
+            "addedLines" : 35
+          },
+          "id" : "4D757748-B007-45E3-AD0C-7415049255A2",
+          "path" : "EmptyStateView.swift"
+        },
+        {
+          "type" : "added",
+          "changes" : {
+            "addedLines" : 60,
+            "removedLines" : 0
+          },
+          "id" : "96786301-2DC7-4C8B-B18A-27BF72457411",
+          "path" : "PlantDetailView.swift"
+        }
+      ],
+      "id" : "82EE94C4-8259-465D-AEB9-3964C4F0FE7B",
+      "content" : "FILE: PlantNote\/Generated\/ContentView.swift\nimport SwiftUI\n\nstruct ContentView: View {\n    @StateObject private var plantManager = PlantManager()\n    @State private var showingAddPlant = false\n    @State private var searchText = \"\"\n    \n    var filteredPlants: [Plant] {\n        if searchText.isEmpty {\n            return plantManager.plants\n        }\n        return plantManager.plants.filter { $0.name.localizedCaseInsensitiveContains(searchText) }\n    }\n    \n    var body: some View {\n        NavigationView {\n            ZStack {\n                Color(\"BackgroundColor\")\n                    .ignoresSafeArea()\n                \n                if plantManager.plants.isEmpty {\n                    EmptyStateView(showingAddPlant: $showingAddPlant)\n                } else {\n                    ScrollView {\n                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {\n                            ForEach(filteredPlants) { plant in\n                                PlantCardView(plant: plant)\n                                    .contextMenu {\n                                        Button(role: .destructive) {\n                                            plantManager.deletePlant(plant)\n                                        } label: {\n                                            Label(\"Delete\", systemImage: \"trash\")\n                                        }\n                                    }\n                            }\n                        }\n                        .padding()\n                    }\n                }\n            }\n            .navigationTitle(\"My Plants\")\n            .searchable(text: $searchText, prompt: \"Search plants\")\n            .toolbar {\n                ToolbarItem(placement: .navigationBarTrailing) {\n                    Button {\n                        showingAddPlant = true\n                    } label: {\n                        Image(systemName: \"plus.circle.fill\")\n                            .font(.title2)\n                            .foregroundColor(.green)\n                    }\n                }\n            }\n            .sheet(isPresented: $showingAddPlant) {\n                AddPlantView(plantManager: plantManager)\n            }\n        }\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/Plant.swift\nimport Foundation\n\nstruct Plant: Identifiable, Codable {\n    let id: UUID\n    var name: String\n    var notes: String\n    var lastWatered: Date\n    var lastFertilized: Date?\n    var lastRepotted: Date?\n    var wateringInterval: Int \/\/ in days\n    \n    init(id: UUID = UUID(), name: String, notes: String, lastWatered: Date = Date(), lastFertilized: Date? = nil, lastRepotted: Date? = nil, wateringInterval: Int) {\n        self.id = id\n        self.name = name\n        self.notes = notes\n        self.lastWatered = lastWatered\n        self.lastFertilized = lastFertilized\n        self.lastRepotted = lastRepotted\n        self.wateringInterval = wateringInterval\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/PlantManager.swift\nimport Foundation\n\nclass PlantManager: ObservableObject {\n    @Published var plants: [Plant] = []\n    private let savePath = FileManager.documentDirectory.appendingPathComponent(\"SavedPlants\")\n    \n    init() {\n        loadPlants()\n    }\n    \n    func addPlant(_ plant: Plant) {\n        plants.append(plant)\n        savePlants()\n    }\n    \n    func updatePlant(_ plant: Plant) {\n        if let index = plants.firstIndex(where: { $0.id == plant.id }) {\n            plants[index] = plant\n            savePlants()\n        }\n    }\n    \n    func deletePlant(_ plant: Plant) {\n        plants.removeAll { $0.id == plant.id }\n        savePlants()\n    }\n    \n    private func savePlants() {\n        do {\n            let data = try JSONEncoder().encode(plants)\n            try data.write(to: savePath, options: [.atomic, .completeFileProtection])\n        } catch {\n            print(\"Unable to save plants: \\(error.localizedDescription)\")\n        }\n    }\n    \n    private func loadPlants() {\n        do {\n            let data = try Data(contentsOf: savePath)\n            plants = try JSONDecoder().decode([Plant].self, from: data)\n        } catch {\n            plants = []\n        }\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/PlantCardView.swift\nimport SwiftUI\n\nstruct PlantCardView: View {\n    let plant: Plant\n    @State private var showingDetail = false\n    \n    var body: some View {\n        Button {\n            showingDetail = true\n        } label: {\n            VStack(alignment: .leading, spacing: 8) {\n                Text(plant.name)\n                    .font(.headline)\n                    .foregroundColor(.primary)\n                \n                VStack(alignment: .leading, spacing: 4) {\n                    Label(\"Last watered: \\(plant.lastWatered.formatted(.dateTime.day().month()))\", systemImage: \"drop.fill\")\n                    Text(\"Water in: \\(daysUntilNextWatering) days\")\n                }\n                .font(.caption)\n                .foregroundColor(.secondary)\n            }\n            .padding()\n            .frame(maxWidth: .infinity, alignment: .leading)\n            .background(Color(\"CardBackground\"))\n            .cornerRadius(12)\n            .shadow(radius: 2)\n        }\n        .sheet(isPresented: $showingDetail) {\n            PlantDetailView(plant: plant)\n        }\n    }\n    \n    private var daysUntilNextWatering: Int {\n        let nextWatering = plant.lastWatered.addingTimeInterval(Double(plant.wateringInterval * 24 * 60 * 60))\n        let difference = Calendar.current.dateComponents([.day], from: Date(), to: nextWatering)\n        return difference.day ?? 0\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/PlantDetailView.swift\nimport SwiftUI\n\nstruct PlantDetailView: View {\n    @Environment(\\.dismiss) private var dismiss\n    @EnvironmentObject private var plantManager: PlantManager\n    let plant: Plant\n    @State private var editedPlant: Plant\n    \n    init(plant: Plant) {\n        self.plant = plant\n        _editedPlant = State(initialValue: plant)\n    }\n    \n    var body: some View {\n        NavigationView {\n            Form {\n                Section(\"Plant Information\") {\n                    TextField(\"Plant Name\", text: $editedPlant.name)\n                    TextEditor(text: $editedPlant.notes)\n                        .frame(height: 100)\n                }\n                \n                Section(\"Care Schedule\") {\n                    HStack {\n                        Text(\"Watering Interval\")\n                        Stepper(\"\\(editedPlant.wateringInterval) days\", value: $editedPlant.wateringInterval, in: 1...30)\n                    }\n                    \n                    DatePicker(\"Last Watered\", selection: $editedPlant.lastWatered, displayedComponents: .date)\n                    \n                    DatePicker(\"Last Fertilized\", selection: Binding(\n                        get: { editedPlant.lastFertilized ?? Date() },\n                        set: { editedPlant.lastFertilized = $0 }\n                    ), displayedComponents: .date)\n                    \n                    DatePicker(\"Last Repotted\", selection: Binding(\n                        get: { editedPlant.lastRepotted ?? Date() },\n                        set: { editedPlant.lastRepotted = $0 }\n                    ), displayedComponents: .date)\n                }\n            }\n            .navigationTitle(\"Plant Details\")\n            .navigationBarTitleDisplayMode(.inline)\n            .toolbar {\n                ToolbarItem(placement: .navigationBarLeading) {\n                    Button(\"Cancel\") {\n                        dismiss()\n                    }\n                }\n                ToolbarItem(placement: .navigationBarTrailing) {\n                    Button(\"Save\") {\n                        plantManager.updatePlant(editedPlant)\n                        dismiss()\n                    }\n                }\n            }\n        }\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/AddPlantView.swift\nimport SwiftUI\n\nstruct AddPlantView: View {\n    @Environment(\\.dismiss) private var dismiss\n    @ObservedObject var plantManager: PlantManager\n    \n    @State private var name = \"\"\n    @State private var notes = \"\"\n    @State private var wateringInterval = 7\n    @State private var lastWatered = Date()\n    @State private var lastFertilized: Date?\n    @State private var lastRepotted: Date?\n    \n    var body: some View {\n        NavigationView {\n            Form {\n                Section(\"Plant Information\") {\n                    TextField(\"Plant Name\", text: $name)\n                    TextEditor(text: $notes)\n                        .frame(height: 100)\n                }\n                \n                Section(\"Care Schedule\") {\n                    HStack {\n                        Text(\"Watering Interval\")\n                        Stepper(\"\\(wateringInterval) days\", value: $wateringInterval, in: 1...30)\n                    }\n                    \n                    DatePicker(\"Last Watered\", selection: $lastWatered, displayedComponents: .date)\n                    \n                    DatePicker(\"Last Fertilized\", selection: Binding(\n                        get: { lastFertilized ?? Date() },\n                        set: { lastFertilized = $0 }\n                    ), displayedComponents: .date)\n                    \n                    DatePicker(\"Last Repotted\", selection: Binding(\n                        get: { lastRepotted ?? Date() },\n                        set: { lastRepotted = $0 }\n                    ), displayedComponents: .date)\n                }\n            }\n            .navigationTitle(\"Add New Plant\")\n            .navigationBarTitleDisplayMode(.inline)\n            .toolbar {\n                ToolbarItem(placement: .navigationBarLeading) {\n                    Button(\"Cancel\") {\n                        dismiss()\n                    }\n                }\n                ToolbarItem(placement: .navigationBarTrailing) {\n                    Button(\"Add\") {\n                        let plant = Plant(\n                            name: name,\n                            notes: notes,\n                            lastWatered: lastWatered,\n                            lastFertilized: lastFertilized,\n                            lastRepotted: lastRepotted,\n                            wateringInterval: wateringInterval\n                        )\n                        plantManager.addPlant(plant)\n                        dismiss()\n                    }\n                    .disabled(name.isEmpty)\n                }\n            }\n        }\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/EmptyStateView.swift\nimport SwiftUI\n\nstruct EmptyStateView: View {\n    @Binding var showingAddPlant: Bool\n    \n    var body: some View {\n        VStack(spacing: 20) {\n            Image(systemName: \"leaf.fill\")\n                .font(.system(size: 60))\n                .foregroundColor(.green)\n            \n            Text(\"No Plants Yet\")\n                .font(.title2)\n                .fontWeight(.bold)\n            \n            Text(\"Start adding your plants to track their care schedule\")\n                .multilineTextAlignment(.center)\n                .foregroundColor(.secondary)\n            \n            Button {\n                showingAddPlant = true\n            } label: {\n                Text(\"Add Your First Plant\")\n                    .fontWeight(.semibold)\n                    .foregroundColor(.white)\n                    .padding(.horizontal, 20)\n                    .padding(.vertical, 10)\n                    .background(Color.green)\n                    .cornerRadius(8)\n            }\n        }\n        .padding()\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/FileManager+Extension.swift\nimport Foundation\n\nextension FileManager {\n    static var documentDirectory: URL {\n        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)\n        return paths[0]\n    }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/Assets.xcassets\/BackgroundColor.colorset\/Contents.json\n{\n  \"colors\" : [\n    {\n      \"color\" : {\n        \"color-space\" : \"srgb\",\n        \"components\" : {\n          \"alpha\" : \"1.000\",\n          \"blue\" : \"0.980\",\n          \"green\" : \"0.980\",\n          \"red\" : \"0.980\"\n        }\n      },\n      \"idiom\" : \"universal\"\n    },\n    {\n      \"appearances\" : [\n        {\n          \"appearance\" : \"luminosity\",\n          \"value\" : \"dark\"\n        }\n      ],\n      \"color\" : {\n        \"color-space\" : \"srgb\",\n        \"components\" : {\n          \"alpha\" : \"1.000\",\n          \"blue\" : \"0.150\",\n          \"green\" : \"0.150\",\n          \"red\" : \"0.150\"\n        }\n      },\n      \"idiom\" : \"universal\"\n    }\n  ],\n  \"info\" : {\n    \"author\" : \"xcode\",\n    \"version\" : 1\n  }\n}\n\nEND_FILE\n\nFILE: PlantNote\/Generated\/Assets.xcassets\/CardBackground.colorset\/Contents.json\n{\n  \"colors\" : [\n    {\n      \"color\" : {\n        \"color-space\" : \"srgb\",\n        \"components\" : {\n          \"alpha\" : \"1.000\",\n          \"blue\" : \"1.000\",\n          \"green\" : \"1.000\",\n          \"red\" : \"1.000\"\n        }\n      },\n      \"idiom\" : \"universal\"\n    },\n    {\n      \"appearances\" : [\n        {\n          \"appearance\" : \"luminosity\",\n          \"value\" : \"dark\"\n        }\n      ],\n      \"color\" : {\n        \"color-space\" : \"srgb\",\n        \"components\" : {\n          \"alpha\" : \"1.000\",\n          \"blue\" : \"0.200\",\n          \"green\" : \"0.200\",\n          \"red\" : \"0.200\"\n        }\n      },\n      \"idiom\" : \"universal\"\n    }\n  ],\n  \"info\" : {\n    \"author\" : \"xcode\",\n    \"version\" : 1\n  }\n}\n\nEND_FILE"
+    }
+  ]
 }
