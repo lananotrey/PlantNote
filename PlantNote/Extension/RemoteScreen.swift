@@ -7,18 +7,22 @@ struct RemoteScreen: View {
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
-        Group {
-            switch remoteViewModel.currentState {
-            case .main:
-                ContentView()
-            case .service:
-                serviceContent
+        mainContent
+            .onAppear(perform: handleOnAppear)
+            .onChange(of: scenePhase) { newPhase in
+                if newPhase == .active {
+                    AppRatingManager.shared.checkAndRequestReview()
+                }
             }
-        }
-        .onAppear(perform: handleOnAppear)
-        .onChange(of: scenePhase) { newPhase in
-            if newPhase == .active {
-                AppRatingManager.shared.checkAndRequestReview()
+    }
+    
+    @ViewBuilder
+    private var mainContent: some View {
+        Group {
+            if remoteViewModel.currentState == .main {
+                ContentView()
+            } else {
+                serviceContent
             }
         }
     }
@@ -79,3 +83,4 @@ struct RemoteScreen: View {
         LocalStorage.shared.isFirstLaunch = false
     }
 }
+
