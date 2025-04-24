@@ -18,8 +18,18 @@ struct AddPlantView: View {
             Form {
                 Section("Plant Information") {
                     TextField("Plant Name", text: $name)
-                    TextEditor(text: $notes)
-                        .frame(height: 100)
+                    
+                    VStack(alignment: .leading) {
+                        Text("Notes")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        TextEditor(text: $notes)
+                            .frame(height: 100)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.secondary.opacity(0.2), lineWidth: 1)
+                            )
+                    }
                 }
                 
                 Section("Care Schedule") {
