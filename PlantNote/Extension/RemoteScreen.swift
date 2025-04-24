@@ -17,15 +17,7 @@ struct RemoteScreen: View {
     }
     
     @ViewBuilder
-    private var mainContent: some View {
-        Group {
-            if remoteViewModel.currentState == .main {
-                ContentView()
-            } else {
-                serviceContent
-            }
-        }
-    }
+   
     
     @ViewBuilder
     private var serviceContent: some View {
